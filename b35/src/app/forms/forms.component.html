@@ -1,0 +1,42 @@
+<p>
+  forms works!
+</p>
+<pre>
+  <form #frm=ngForm (submit)="frm.valid && login()">
+    <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5"> {{fname}}
+
+    <!-- <p style="color:red" *ngIf="firstName.dirty && firstName.invalid"> please enter a valid input</p> -->
+    <p style="color:red" *ngIf="firstName.dirty && firstName.hasError('required')"> this is mandatory field</p>
+
+    <p style="color:red" *ngIf="firstName.dirty && firstName.hasError('minlength')"> please enter min 5 chars</p>
+
+
+    <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel> {{lname}}
+
+    <input type="submit" >
+
+    feild states
+    valid :: {{firstName.valid}}
+    invalid :: {{firstName.invalid}}
+    dirty :: {{firstName.dirty}}
+    pristine :: {{firstName.pristine}}
+    touched :: {{firstName.touched}}
+    untouched :: {{firstName.untouched}}
+    required :: {{firstName.hasError('required')}}
+    minlength :: {{firstName.hasError('minlength')}}
+
+
+
+    form states
+    valid :: {{frm.valid}}
+    invalid :: {{frm.invalid}}
+    dirty :: {{frm.dirty}}
+    pristine :: {{frm.pristine}}
+    touched :: {{frm.touched}}
+    untouched :: {{frm.untouched}}
+    submitted :: {{frm.submitted}}
+
+
+
+  </form>
+</pre>

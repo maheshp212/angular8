@@ -1,0 +1,45 @@
+<p>
+  obj-forms works!
+</p>
+<p>
+  forms works!
+</p>
+<pre>
+  <form #frm=ngForm (submit)="frm.valid && login()">
+    <input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5"> {{user.fname}}
+
+    <!-- <p style="color:red" *ngIf="fname.dirty && fname.invalid"> please enter a valid input</p> -->
+    <p style="color:red" *ngIf="fname.dirty && fname.hasError('required')"> this is mandatory field</p>
+
+    <p style="color:red" *ngIf="fname.dirty && fname.hasError('minlength')"> please enter min 5 chars</p>
+
+
+    <input type="text" name="lname" [(ngModel)]="user.lname" #lname=ngModel> {{user.lname}}
+
+    <input type="submit" >
+
+    feild states
+    valid :: {{fname.valid}}
+    invalid :: {{fname.invalid}}
+    dirty :: {{fname.dirty}}
+    pristine :: {{fname.pristine}}
+    touched :: {{fname.touched}}
+    untouched :: {{fname.untouched}}
+    required :: {{fname.hasError('required')}}
+    minlength :: {{fname.hasError('minlength')}}
+
+
+
+    form states
+    valid :: {{frm.valid}}
+    invalid :: {{frm.invalid}}
+    dirty :: {{frm.dirty}}
+    pristine :: {{frm.pristine}}
+    touched :: {{frm.touched}}
+    untouched :: {{frm.untouched}}
+    submitted :: {{frm.submitted}}
+
+
+
+  </form>
+</pre>

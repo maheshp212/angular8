@@ -1,0 +1,34 @@
+<p>
+  pipes works!
+</p>
+<pre>
+{{fname}}
+{{fname | lowercase}}
+{{fname | uppercase}}
+
+{{age}}
+{{age | number}}
+
+{{age | currency}}
+{{age | currency:'Rs'}}
+{{age | currency:'INR'}} <!-- this is not there in angular 1 -->
+{{age | currency:'INR '}}
+{{age | currency:'&#8377;'}} <!-- this is not ther in angular 2 & 4 -->
+
+
+{{age | hexa}}
+{{255 | hexa}}
+{{15 | hexa}}
+
+
+{{5 | params:4:5:1}}
+
+{{day}}
+{{day |date}}
+{{day |date:'dd-MM-yy'}}
+
+
+{{user}}
+{{user | json}}
+
+</pre>
