@@ -13,6 +13,8 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
     HexaPipe,
     ParamsPipe,
     FormsComponent,
-    ObjFormsComponent
+    ObjFormsComponent,
+    AttrDirective,
+    ClassDirective
   ],
   imports: [
     BrowserModule,

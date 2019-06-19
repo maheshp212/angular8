@@ -1,3 +1,17 @@
 <p>
   intro works!
 </p>
+
+<p 
+[appAttr]="login" 
+[msg]="'hi hi  hi'"
+[fname]="'qshore'"
+[user]="{tech:'angular', city:'hyd'}"
+
+(sendFname)="fetchFname($event)"
+(sendUser) = "sendUser($event)"
+> this is custom attr directive</p>
+
+<div class="appClass"> this is class directive</div>
+
+<app-forms></app-forms>

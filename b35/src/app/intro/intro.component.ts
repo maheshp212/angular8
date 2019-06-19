@@ -12,4 +12,18 @@ export class IntroComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  login(){
+    console.log('custom business logic from component')
+  }
+
+  fetchFname(fname){
+    console.log('##########');
+    console.log(fname);
+  }
+
+  sendUser(user){
+    console.log('************');
+    console.log(user);
+  }
 }
