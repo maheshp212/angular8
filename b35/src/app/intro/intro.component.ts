@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  fruits = ['kwii', 'melon', 'berry'];
+  user = {fname: 'qshore', lname:'technoloy'};
   constructor() { }
 
   ngOnInit() {
@@ -25,5 +27,14 @@ export class IntroComponent implements OnInit {
   sendUser(user){
     console.log('************');
     console.log(user);
+  }
+
+
+  sendFname(fname){
+    alert(fname);
+  }
+
+  getFruit(fruit){
+    alert(fruit);
   }
 }

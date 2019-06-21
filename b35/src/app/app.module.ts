@@ -15,6 +15,7 @@ import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ClassDirective } from './class.directive';
     FormsComponent,
     ObjFormsComponent,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

@@ -14,4 +14,11 @@
 
 <div class="appClass"> this is class directive</div>
 
-<app-forms></app-forms>
+<!-- <app-forms></app-forms> -->
+
+<app-custom 
+  [user]="user"
+  [fruits]="fruits"
+  (sendFname) = "sendFname($event)"
+  (sendFruit) = "getFruit($event)"
+  ></app-custom>
