@@ -16,6 +16,8 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
 import { CustomComponent } from './custom/custom.component';
+import { MaheshTableComponent } from './mahesh-table/mahesh-table.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { CustomComponent } from './custom/custom.component';
     ObjFormsComponent,
     AttrDirective,
     ClassDirective,
-    CustomComponent
+    CustomComponent,
+    MaheshTableComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
