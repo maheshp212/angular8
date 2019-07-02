@@ -54,7 +54,7 @@ export class ApiComponent implements OnInit {
   }
   deleteUser(id){
 
-    this.user.deleteUser(id).subscribe((res:any)=>{
+    this.user.deleteUser  (id).subscribe((res:any)=>{
       this.userInfo =res;
       this.listUsers();
     },(err)=>{
