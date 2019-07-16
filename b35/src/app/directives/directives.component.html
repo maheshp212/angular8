@@ -10,6 +10,7 @@
 -->
 
 <p *ngIf="fname == 'qshore'"> this is if</p>
+
 <p [hidden]="fname == 'qshore'"> this is hidden</p>
 
 
@@ -31,8 +32,9 @@
 </select>
 
 <table border="1">
-  <tr *ngFor="let fruit of fruits">
-    <td> {{fruit}}</td>
+  <tr *ngFor="let x of users">
+    <td> {{x.name}}</td>
+    <td> {{x.country}}</td>
   </tr>
 </table>
 
