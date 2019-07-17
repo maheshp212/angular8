@@ -1,1 +1,71 @@
 <p>directives works!</p>
+
+<p *ngIf="fname == 'qshore'"> this is if </p>
+<p [hidden]="fname == 'qshore'"> this is hidden </p>
+
+<p [ngSwitch]="fname">
+    <span *ngSwitchCase="'qshore'"> this is qshroe</span>
+    <span *ngSwitchCase="'tech'"> this is tech</span>
+    <span *ngSwitchCase="'angular'"> this is angular</span>
+    <span *ngSwitchDefault> this is defualt</span>
+</p>
+
+
+<p *ngFor="let fruit of fruits"> {{fruit}} </p>
+
+<ol >
+    <li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select >
+    <option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+    <tr *ngFor="let fruit of fruits">
+        <td> {{fruit}} </td>
+    </tr>
+</table>
+
+<input type="text" name="fname" [(ngModel)]="fname">
+
+
+
+<p (click)="callMe()"> this is click</p>
+<p (dblclick)="callMe()"> this is dblclick</p>
+<p (mouseover)="callMe()"> this is mouseover</p>
+<p (mouseout)="callMe()"> this is out</p>
+<p (mouseenter)="callMe()"> this is enter</p>
+<p (mouseleave)="callMe()"> this is leave</p>
+<p (mousemove)="callMe()"> this is move</p>
+
+<pre>
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="click" (click)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="focus" (focus)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="blur" (blur)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="change" (blur)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="keyup" (keyup)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="keydown" (keydown)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="keypress" (keypress)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="cut" (cut)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="copy" (copy)="callMe()">
+
+<input type="text" name="fname" [(ngModel)]="fname" placeholder="paste" (paste)="callMe()">
+
+
+
+
+
+
+
+
+    
+</pre>
