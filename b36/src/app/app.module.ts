@@ -9,6 +9,11 @@ import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe, AppendPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { SmallcapsPipe } from './smallcaps.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,13 @@ import { FormsComponent } from './forms/forms.component';
     IntroComponent,
     VariablesComponent,
     DirectivesComponent,
-    FormsComponent
+    FormsComponent,
+    ObjFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    AppendPipe,
+    SmallcapsPipe
   ],
   imports: [
     BrowserModule,

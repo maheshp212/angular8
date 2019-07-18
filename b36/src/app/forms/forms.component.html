@@ -1,10 +1,39 @@
 <p>forms works!</p>
 
 <pre>
-    <form name="f">
+    <form name="f" #frm=ngForm (submit)="frm.valid && login()">
 
-        <input type="text" name="fname" [(ngModel)]="fname">
-        <input type="text" name="lname" [(ngModel)]="lname">
+        <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5" maxlength="10"> {{fname}}
+
+        <!-- <p *ngIf="firstName.dirty && firstName.invalid" style="color:red"> please enter a valid input</p> -->
+        <p *ngIf="firstName.dirty && firstName.hasError('required')" style="color:red"> this is mandatory</p>
+
+        <p *ngIf="firstName.dirty && firstName.hasError('minlength')" style="color:red"> please enter min 5 chars</p>
+        <p *ngIf="firstName.dirty && firstName.hasError('maxlength')" style="color:red"> allows max 10 charst</p>
+
+
+        <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel>
         <input type="submit">
+
+        <!-- dirty :: {{f.fname.$dirty}} -->
+        ****field
+        valid :: {{firstName.valid}}
+        invalid :: {{firstName.invalid}}
+        dirty :: {{firstName.dirty}}
+        pristine :: {{firstName.pristine}}
+        touched :: {{firstName.touched}}
+        untouched :: {{firstName.untouched}}
+
+
+        ****Form
+        valid :: {{frm.valid}}
+        invalid :: {{frm.invalid}}
+        dirty :: {{frm.dirty}}
+        pristine :: {{frm.pristine}}
+        touched :: {{frm.touched}}
+        untouched :: {{frm.untouched}}
+        submitted :: {{frm.submitted}}
+        
+
     </form>
 </pre>

@@ -1,0 +1,35 @@
+<p>pipes works!</p>
+<pre>
+
+    {{fname}}
+    {{fname | lowercase}}
+    {{fname | uppercase}}
+    {{fname | smallcaps}}
+
+    {{age}}
+    {{age | number}}
+    {{age | currency}}
+    {{age | currency:'Rs. '}}
+    {{age | currency:'INR'}}
+    {{age | currency:'&#8377;'}}
+
+    {{day}}
+    {{day | date}}
+    {{day | date:'dd-MM-yy'}}
+
+    
+    {{user}}
+    {{user | json}}
+
+    {{255 | hexa}}
+    {{age | hexa}}
+
+    {{5 | params:2:4:6}}
+    
+</pre>
+
+<table border="1">
+    <tr *ngFor="let fruit of fruits | append:'hello'">
+        <td> {{fruit}}</td>
+    </tr>
+</table>
