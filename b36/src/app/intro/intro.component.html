@@ -1,1 +1,22 @@
 <p>intro works!</p>
+
+
+<p [appAttr]="customLogdic" [msg]="'hello'" [fname]="'Qshore'" (sendData)="getData($event)" > this is custom attr directive</p>
+
+<p class="appClass"> class directive</p>
+
+<app-custom [msg]="'hello'" [user]="userInfo" 
+    (_fetchName)="fetchName($event)" (_fetchExp)="fetchExp($event)" ></app-custom>
+
+<app-custom [msg]="'hi'" [user]="user" [showButtons]="false" ></app-custom>
+
+
+<mahesh-table [headers]="userHeaders" [data]="users"></mahesh-table>
+
+<br><br><br>
+
+<mahesh-table [headers]="carHeaders" [data]="cars"></mahesh-table>
+
+<br><br><br>
+
+<mahesh-table [headers]="animalHeaders" [data]="animals"></mahesh-table>

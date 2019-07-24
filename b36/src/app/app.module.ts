@@ -14,6 +14,10 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe, AppendPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { SmallcapsPipe } from './smallcaps.pipe';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
+import { MaheshTableComponent } from './mahesh-table/mahesh-table.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { SmallcapsPipe } from './smallcaps.pipe';
     HexaPipe,
     ParamsPipe,
     AppendPipe,
-    SmallcapsPipe
+    SmallcapsPipe,
+    AttrDirective,
+    ClassDirective,
+    CustomComponent,
+    MaheshTableComponent
   ],
   imports: [
     BrowserModule,
