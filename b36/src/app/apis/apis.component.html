@@ -1,0 +1,34 @@
+<p>apis works!</p>
+<table border="1">
+    <tr>
+        <th> ID </th>
+        <th> Name </th>
+        <th> Age </th>
+        <th> Email </th>
+        <th> password </th>
+        <th> Actions </th>
+    </tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.id}}</td>
+        <td>{{user.fname}} {{user.lname}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.password}}</td>
+        <td>
+            <p (click)="viewUser(user.id)">view</p>
+            <p (click)="editUser(user.id)">edit</p>
+            <p (click)="deleteUser(user.id)">delete</p>
+        </td>
+    </tr>
+</table>
+<button (click)="createUser()">create</button>
+<pre>
+
+    {{userInfo | json}}
+
+
+
+
+
+
+</pre>

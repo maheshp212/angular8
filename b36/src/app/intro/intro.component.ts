@@ -37,8 +37,8 @@ export class IntroComponent implements OnInit {
 
   carHeaders: any = [
     {name: ' Name', key:'name'},
-    {name: 'Model', key:'model'},
     {name: 'Brand', key:'brand'},
+    {name: 'Model', key:'model'},
   ]
 
   cars:any = [
