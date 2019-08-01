@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VaraiblesComponent } from './varaibles/varaibles.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     IntroComponent,
-    VaraiblesComponent
+    VaraiblesComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
