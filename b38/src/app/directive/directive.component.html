@@ -1,0 +1,64 @@
+<p>directive works!</p>
+
+{{fname}}
+<p *ngIf="fname == 'qshore'"> this is if</p>
+<p [hidden]="fname == 'qshore'"> this is hidden</p>
+
+
+<p [ngSwitch]="fname">
+    <span *ngSwitchCase="'qshore'"> this is qshroe</span>
+    <span *ngSwitchCase="'angular'"> this is angular</span>
+    <span *ngSwitchCase="'tech'"> this is tech</span>
+    <span *ngSwitchDefault> this is default</span>
+</p>
+
+<p *ngFor="let fruit of fruits"> {{fruit}} </p>
+<ol >
+    <li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select >
+    <option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+    <tr *ngFor="let fruit of fruits">
+        <td > {{fruit}} </td>
+    </tr>
+</table>
+
+<input type="text" name="fname" [(ngModel)]="fname">
+
+
+<div (click)="callMe()"> this is click</div>
+<div (dblclick)="callMe()"> this is dblclick</div>
+<div (mouseup)="callMe()"> this is up</div>
+<div (mousedown)="callMe()"> this is down</div>
+<div (mouseover)="callMe()"> this is over</div>
+<div (mouseout)="callMe()"> this is out</div>
+<div (mouseenter)="callMe()"> this is enter</div>
+<div (mouseleave)="callMe()"> this is leave</div>
+<div (mousemove)="callMe()"> this is move</div>
+
+<pre>
+
+    <input type="text" name="lname" [(ngModel)]="lname" (click)="callMe()" placeholder="click">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (focus)="callMe()" placeholder="focus">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (blur)="callMe()" placeholder="blur">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (change)="callMe()" placeholder="change">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (keyup)="callMe()" placeholder="up">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (keydown)="callMe()" placeholder="down">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (keypress)="callMe()" placeholder="press">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (cut)="callMe()" placeholder="cut">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (copy)="callMe()" placeholder="copy">
+
+    <input type="text" name="lname" [(ngModel)]="lname" (paste)="callMe()" placeholder="paste">
+</pre>
