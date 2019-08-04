@@ -21,6 +21,8 @@ import { MaheshTableComponent } from './mahesh-table/mahesh-table.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ApisComponent } from './apis/apis.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import {colorPicker} from 'angular-radial-color-picker'
+import 'angular-radial-color-picker/dist/css/color-picker.scss';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    colorPicker
   ],
   providers: [],
   bootstrap: [AppComponent]
