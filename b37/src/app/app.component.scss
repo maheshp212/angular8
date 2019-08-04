@@ -1,0 +1,54 @@
+header{
+    clear: both;
+    background-color: teal;
+    color:white;
+    height: 55px;
+    .logo{
+        text-align: right;
+        float: left;
+        width: 30%;
+        img{width: 50px}
+    }
+    .title{
+        float: left;
+        width: 70%;
+        h1{
+            margin:10px 0 0 0;
+        }
+    }
+}
+nav{
+    clear: both;
+    background-color: thistle;
+    height: 42px;
+    ul{
+        margin:0;
+        padding: 12px;
+        li{
+            list-style-type: none;
+            float: left;
+            a{
+                padding: 10px;
+                text-decoration: none;
+                color: white;
+            }
+            a:hover{
+                background-color: teal;
+                border-radius: 5px;
+
+            }
+        }
+    }
+}
+main{
+    clear: both;
+    min-height: 500px;
+    padding: 15px;
+    background-color: #0080800d;
+}
+footer{
+    clear: both;
+    text-align: center;
+    background-color: teal;
+    padding:10px 0;
+}
