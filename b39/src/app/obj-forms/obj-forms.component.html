@@ -1,0 +1,39 @@
+<p>obj-forms works!</p>
+
+<pre>
+<form name="frm" #f=ngForm (submit)="f.valid && login()">
+    <input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5" maxlength="10">
+    <!-- <p class="error" *ngIf="fname.dirty && fname.invalid"> Please enter a valid input</p> -->
+    <!-- <p class="error" *ngIf="fname.dirty && fname.hasError('required')"> This is a mandatory field</p>
+    <p class="error" *ngIf="fname.dirty && fname.hasError('minlength')"> Please enter min 5 char</p> -->
+    <!-- <p class="error" *ngIf="fname.touched && fname.hasError('required')"> This is a mandatory field</p>
+    <p class="error" *ngIf="fname.touched && fname.hasError('minlength')"> Please enter min 5 char</p> -->
+    <p class="error" *ngIf="f.submitted && fname.hasError('required')"> This is a mandatory field</p>
+    <p class="error" *ngIf="f.submitted && fname.hasError('minlength')"> Please enter min 5 char</p>
+    
+    <input type="text" name="lname" [(ngModel)]="user.lname" #lname=ngModel>
+    
+    <input type="submit">
+
+    field States**
+    valid :: {{fname.valid}}
+    invalid :: {{fname.invalid}}
+    dirty :: {{fname.dirty}}
+    pristine :: {{fname.pristine}}
+    touched :: {{fname.touched}}
+    untouched :: {{fname.untouched}}
+    required :: {{fname.hasError('required')}}
+    minlength :: {{fname.hasError('minlength')}}
+    maxlength :: {{fname.hasError('maxlength')}}
+
+    form States**
+    valid :: {{f.valid}}
+    invalid :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+
+</form>
+</pre>
