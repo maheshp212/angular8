@@ -10,6 +10,15 @@ import { VaraiblesComponent } from './varaibles/varaibles.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { PostcurrencyPipe } from './postcurrency.pipe';
+import { ReversePipe } from './reverse.pipe';
+import { LowerupperPipe } from './lowerupper.pipe';
+import { MinusHoursPipe } from './minus-hours.pipe';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +28,16 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
     VaraiblesComponent,
     DirectivesComponent,
     FormsComponent,
-    ObjFormsComponent
+    ObjFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    PostcurrencyPipe,
+    ReversePipe,
+    LowerupperPipe,
+    MinusHoursPipe,
+    AttrDirective,
+    ClassDirective
   ],
   imports: [
     BrowserModule,
