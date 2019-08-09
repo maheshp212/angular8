@@ -19,6 +19,7 @@ import { LowerupperPipe } from './lowerupper.pipe';
 import { MinusHoursPipe } from './minus-hours.pipe';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ClassDirective } from './class.directive';
     LowerupperPipe,
     MinusHoursPipe,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
   message:string = 'Hello';
+  user = {fname: 'qshroe' , lname:'technologies'}
   constructor() { }
 
   ngOnInit() {
@@ -18,5 +19,16 @@ export class IntroComponent implements OnInit {
 
   getcustomAttrData(data){
     console.log(data);
+  }
+  sendFnamesss(name){
+    alert(name);
+  }
+
+  sendLname(name){
+    alert(name);
+  }
+
+  age(name){
+    alert(name);
   }
 }

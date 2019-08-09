@@ -13,4 +13,22 @@
 
 <div class="appClass"> class Directive</div>
 
-<app-forms></app-forms>
+<app-custom 
+    [user]="user"
+    [msg]="message"
+    [age]="34"
+    (sendFname) = "sendFnamesss($event)"
+    (sendLname) = "sendLname($event)"
+    (sendAge) = "age($event)"
+    ></app-custom>
+<!-- <app-forms></app-forms> -->
+#################################################
+<app-custom 
+    [user]="{fname:'Me', lname:'you' }"
+    [msg]="'Hi'"
+    [age]="45"
+    [showButtons] = "false"
+    (sendFname) = "sendFnamesss($event)"
+    (sendLname) = "sendLname($event)"
+    (sendAge) = "age($event)"
+    ></app-custom>
