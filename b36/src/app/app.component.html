@@ -13,11 +13,14 @@
     <li> <a [routerLink]="['var']">Variables</a></li>
     <li> <a [routerLink]="['dir']">Directives</a></li>
     <li> <a [routerLink]="['forms', 'mahesh', 'perla', '56']">FOrms</a></li>
+    <li> <a *ngFor="let user of users" [routerLink]="['forms', user.fname, user.lname, user.asdfasdf]"> {{user.fname + user.lname + user.asdfasdf}}</a></li>
     <li> <a [routerLink]="['obj-forms']">Obj Forms</a></li>
     <li> <a [routerLink]="['pipes']">Pipes</a></li>
     <li> <a [routerLink]="['life']">Life Cycle</a></li>
     <li> <a [routerLink]="['apis']">apis</a></li>
-    <li> <a [routerLink]="['mahesh']">notfound</a></li>
+    <li> <a [routerLink]="['life-cycle']">Life</a></li>
+    <li> <a [routerLink]="['services']">services</a></li>
+    <li> <a [routerLink]="['maesg']">aesf</a></li>
   </ul>
 </nav>
 <div class="container">

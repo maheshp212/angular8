@@ -10,8 +10,14 @@ import { PipesComponent } from './pipes/pipes.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ApisComponent } from './apis/apis.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { LifeComponent } from './life/life.component';
+import { ServicesComponent } from './services/services.component';
 
+//https://www.flipkart.com/vu-play-102cm-40-inch-full-hd-led-tv/p/itmf2rfmpfhxevgy
 
+//https://www.flipkart.com/lee-cooper-lace-up-men/p/itmfa8dtpngugwgy
+
+//http://localhost:4200/forms/mahesh/perla/56
 const routes: Routes = [
   {path:'', component:HomeComponent},
   {path:'intro', component:IntroComponent},
@@ -22,6 +28,8 @@ const routes: Routes = [
   {path: 'pipes', component:PipesComponent},
   {path: 'life', component:LifecycleComponent},
   {path: 'apis', component:ApisComponent},
+  {path: 'life-cycle', component:LifeComponent},
+  {path: 'services', component:ServicesComponent},
   {path: '**', component:NotfoundComponent},
 ];
 
