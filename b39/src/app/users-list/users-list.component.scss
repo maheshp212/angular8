@@ -1,0 +1,14 @@
+.container{
+    border:1px solid;
+    min-height: 300px;
+    padding: 10px;
+}
+.user{
+    float: left;
+    width: 33%;
+    height: 80px;
+    text-align: center;
+    cursor: pointer;
+    img{height: 50px; width: 50px;  border-radius:50% }
+    .name{height: 30px;}
+}

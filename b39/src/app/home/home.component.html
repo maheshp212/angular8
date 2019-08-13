@@ -1,1 +1,10 @@
 <p>home works!</p>
+
+<app-users-list 
+    [users]="availableUsers"
+    class="first"
+    (sendIndex)="availableUsersIndex($event)"></app-users-list>
+
+
+    <app-users-list [users]="selectedUsers"
+(sendIndex)="selectedUsersIndex($event)"></app-users-list>

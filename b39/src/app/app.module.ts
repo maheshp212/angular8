@@ -20,6 +20,8 @@ import { MinusHoursPipe } from './minus-hours.pipe';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
 import { CustomComponent } from './custom/custom.component';
+import { MaheshTableComponent } from './mahesh-table/mahesh-table.component';
+import { UsersListComponent } from './users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { CustomComponent } from './custom/custom.component';
     MinusHoursPipe,
     AttrDirective,
     ClassDirective,
-    CustomComponent
+    CustomComponent,
+    MaheshTableComponent,
+    UsersListComponent,
   ],
   imports: [
     BrowserModule,
