@@ -22,6 +22,7 @@ import { ClassDirective } from './class.directive';
 import { CustomComponent } from './custom/custom.component';
 import { MaheshTableComponent } from './mahesh-table/mahesh-table.component';
 import { UsersListComponent } from './users-list/users-list.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UsersListComponent } from './users-list/users-list.component';
     CustomComponent,
     MaheshTableComponent,
     UsersListComponent,
+    LifecycleComponent,
   ],
   imports: [
     BrowserModule,
