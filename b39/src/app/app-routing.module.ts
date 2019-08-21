@@ -8,6 +8,7 @@ import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ApisComponent } from './apis/apis.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'obj-forms', component:ObjFormsComponent},
   {path:'pipe', component:PipesComponent},
   {path:'life-cycle', component:LifecycleComponent},
+  {path:'apis', component:ApisComponent},
 ];
 
 @NgModule({
