@@ -1,0 +1,20 @@
+import { AuthGuard} from './_guards/index';
+
+const routes: Routes = [
+  { path: '', canActivate: [AuthGuard], component: DashboardLayoutComponent,
+    children: [
+      { path: 'dashboard/s', component: SuperAccountComponent },
+      { path: 'category', component: CategoryComponent},
+    ]
+  },
+  // Dfault Layout for pages
+  { path: '', component: DefaultLayoutComponent,
+    children: [
+      { path: 'about', component: AboutComponent },
+      { path: 'features', component: FeaturesComponent },
+    ]
+  },
+  { path: '**', component: PageNotFoundComponent },
+];
+
+export const routing = RouterModule.forRoot(routes);

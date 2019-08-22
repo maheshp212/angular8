@@ -24,6 +24,7 @@ import { MaheshTableComponent } from './mahesh-table/mahesh-table.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ApisComponent } from './apis/apis.component';
     UsersListComponent,
     LifecycleComponent,
     ApisComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

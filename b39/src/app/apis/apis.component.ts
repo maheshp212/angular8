@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from './../users.service'
+import {UsersService} from './../users.service';
+import {ActivatedRoute} from '@angular/router'
 @Component({
   selector: 'app-apis',
   templateUrl: './apis.component.html',
@@ -9,9 +10,14 @@ import {UsersService} from './../users.service'
 export class ApisComponent implements OnInit {
   users:any = [];
   userInfo:any;
-  constructor(private userService:UsersService) { }
+  constructor(private userService:UsersService, private route:ActivatedRoute) { }
 
   ngOnInit() {
+
+      this.route.params.subscribe((res)=>{
+        console.log(res);
+      })
+
     this.listUsers();
     
   }
