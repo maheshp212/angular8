@@ -1,1 +1,21 @@
 <p>intro works!</p>
+
+<div 
+[appAttr]="dynamicFun" 
+[msg]="msg"
+[fname]="'mahesh'" 
+(sendDetails)="getDetails($event)"> 
+
+custom attr directive
+</div>
+
+
+
+<div class="appClass" >class directive</div>
+
+
+<app-custom [user]="userDetails"
+    (getFname) = "getFname($event)"
+    (getLname) = "getLname($event)"
+    (getAge) = "getAge($event)"
+></app-custom>
