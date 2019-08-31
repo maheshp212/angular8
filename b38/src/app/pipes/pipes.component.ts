@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-pipes',
@@ -12,9 +13,14 @@ export class PipesComponent implements OnInit {
   age = 34;
   day = new Date();
 
-  constructor() { }
+  constructor(private routes:ActivatedRoute) { }
 
   ngOnInit() {
+    this.routes.params.subscribe((res:any)=>{
+      console.log(res);
+    }, ()=>{
+
+    })
   }
 
 }
