@@ -6,13 +6,23 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { RomanPipe } from './roman.pipe';
+import { WordsLengthPipe } from './words-length.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     IntroComponent,
-    VariablesComponent
+    VariablesComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    RomanPipe,
+    WordsLengthPipe
   ],
   imports: [
     BrowserModule,
