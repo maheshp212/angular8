@@ -13,6 +13,7 @@ import { ParamsPipe } from './params.pipe';
 import { RomanPipe } from './roman.pipe';
 import { WordsLengthPipe } from './words-length.pipe';
 import { DirectivesComponent } from './directives/directives.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DirectivesComponent } from './directives/directives.component';
     ParamsPipe,
     RomanPipe,
     WordsLengthPipe,
-    DirectivesComponent
+    DirectivesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
