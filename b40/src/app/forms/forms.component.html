@@ -2,7 +2,7 @@
 
 
 <pre>
-<form #f=ngForm>
+<form #f=ngForm (submit)="f.valid && login();">
     <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel placeholder="fname" required minlength="5">
 
     <!-- <p style="color:red" *ngIf="firstName.dirty && firstName.invalid"> Please enter a valid input</p> -->

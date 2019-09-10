@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./forms.component.scss']
 })
 export class FormsComponent implements OnInit {
-
+  fname:any;
+  lname:any;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login(){
+    alert(this.fname + " -- " + this.lname);  
   }
 
 }

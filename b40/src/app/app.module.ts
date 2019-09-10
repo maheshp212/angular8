@@ -14,6 +14,10 @@ import { RomanPipe } from './roman.pipe';
 import { WordsLengthPipe } from './words-length.pipe';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { FormsComponent } from './forms/forms.component';
     RomanPipe,
     WordsLengthPipe,
     DirectivesComponent,
-    FormsComponent
+    FormsComponent,
+    ObjFormsComponent,
+    AttrDirective,
+    ClassDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

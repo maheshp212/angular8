@@ -1,1 +1,13 @@
 <p>intro works!</p>
+
+<div 
+    [appAttr]="customLogic"
+    [msg]="'hello'"
+    [fname]="fname"
+    (data)="attrRtn($event)" >this is attr directive</div>
+
+
+    <div class="appClass">class directive</div>
+
+    <app-custom></app-custom>
+    <app-pipes></app-pipes>
