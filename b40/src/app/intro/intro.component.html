@@ -9,5 +9,34 @@
 
     <div class="appClass">class directive</div>
 
-    <app-custom></app-custom>
-    <app-pipes></app-pipes>
+    <app-custom [user]="userObj"
+        (x)="getName($event)"
+        (y)="getAge($event)"
+    ></app-custom>
+
+<mahesh-table 
+[headers]="userHeaders"
+ [data]="users"></mahesh-table>
+
+<br><br><br>
+
+<mahesh-table 
+[headers]="carHeaders" 
+[data]="cars"></mahesh-table>
+
+<br><br><br>
+
+<mahesh-table 
+[headers]="animalHeaders" 
+[data]="animals"></mahesh-table>
+
+
+
+<app-users-list 
+    [users]="availableUsers"
+    (sendIndex)="availableUsersIndex($event)"></app-users-list>
+
+
+    <app-users-list [users]="selectedUsers"
+(sendIndex)="selectedUsersIndex($event)"></app-users-list>
+
