@@ -6,3 +6,7 @@
      <button (click)="sendAge()" > Age </button>
  </pre>
 </div>
+
+<tr *ngFor="let user of usersList">
+    <td>{{user.fname}}</td>
+</tr>
