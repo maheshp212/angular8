@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ActivatedRoute} from '@angular/router'
 @Component({
   selector: 'app-obj-forms',
   templateUrl: './obj-forms.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObjFormsComponent implements OnInit {
   user:any = {};
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe((res:any)=>{
+      console.log(res); 
+    },()=>{
+
+    })
   }
   login(){
     alert(this.user.fname + " -- " + this.user.lname);  
