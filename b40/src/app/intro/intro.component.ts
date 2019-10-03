@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class IntroComponent implements OnInit {
   fname = 'qshore';
   userObj = {fname:'qshore', lname:'tech', age:45}
+  //images = [1, 2, 3].map(() => `https://picsum.photos/900/500?random&t=${Math.random()}`);
+
+  images = [
+    'https://static.magiquiz.com/cdn-cgi/image/width=810,quality=85,fit=scale-down,format=auto,onerror=redirect/https://static.magiquiz.com/wp-content/uploads/2018/10/Which-Avenger-Should-You-Marry_LEAD-806x421.jpg',
+    'https://cdn3.movieweb.com/i/article/rl2x4pK0kEXZ6RaEUgu3L504yAsFiL/738:50/Avengers-5-Confirmed-Different-Marvel-Heroes.jpg',
+    'https://static.magiquiz.com/cdn-cgi/image/width=1000,quality=85,fit=scale-down,format=auto,onerror=redirect/https://static.magiquiz.com/wp-content/uploads/2018/04/superhero_570628189.jpg'
+  ]
 
   userHeaders:any = [
     {name: 'First Name', key:'fname'},

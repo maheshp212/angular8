@@ -24,6 +24,8 @@ import { ApisComponent } from './apis/apis.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import {SlideshowModule} from 'ng-simple-slideshow';
+import {NgbModule,NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+import { BasicAuthInterceptor}  from './basic-auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,9 +54,11 @@ import {SlideshowModule} from 'ng-simple-slideshow';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    SlideshowModule
+    SlideshowModule,
+    NgbModule,
+    NgbPaginationModule, NgbAlertModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: BasicAuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
