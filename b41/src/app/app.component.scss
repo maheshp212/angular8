@@ -1,0 +1,56 @@
+  .toolbar {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    .logo{
+        float: left;
+        width:15px;
+        text-align: right;
+    }
+    .menu{
+        float: left;
+        width: 85%;
+
+        ul{
+            list-style-type: none;
+            margin: 0;
+            li{
+                float: left;
+                padding:5px;
+                a{
+                    color:white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+  }
+
+  .content {
+    min-height: 500px;
+}
+
+  footer {
+    text-align: center;
+    color:tomato;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+

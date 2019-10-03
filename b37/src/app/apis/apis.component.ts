@@ -16,13 +16,18 @@ export class ApisComponent implements OnInit {
     this.listUsers() 
   }
   listUsers(){
-    this.users.listUsers().subscribe((res:any)=>{
+    this.users.listUsers().subscribe(
+      
+      (res:any) => {
       //success
       console.log(res);
       this.usersList = res.data;
     }, (err)=>{
       // failure
-    })
+    }
+  
+  
+  )
   }
 
   viewUser(id){

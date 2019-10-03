@@ -14,6 +14,9 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
@@ -27,13 +30,15 @@ import { ApisComponent } from './apis/apis.component';
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    ApisComponent
+    ApisComponent,
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

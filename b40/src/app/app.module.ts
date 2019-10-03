@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -23,7 +23,7 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { ApisComponent } from './apis/apis.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-
+import {SlideshowModule} from 'ng-simple-slideshow';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +51,8 @@ import { NotfoundComponent } from './notfound/notfound.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]
