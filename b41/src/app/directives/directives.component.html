@@ -25,3 +25,39 @@
         <td> {{fruit}} </td>
     </tr>
 </table>
+
+<input type="text" name="fname" [(ngModel)]="fname"> {{fname}}
+
+<p class="eve" (click)="callMe()"> this is click</p>
+<p class="eve" (mouseover)="callMe()"> this is over</p>
+<p class="eve" (mouseout)="callMe()"> this is out</p>
+<p class="eve" (mouseenter)="callMe()"> this is enter</p>
+<p class="eve" (mouseleave)="callMe()"> this is leave</p>
+<p class="eve" (mousedown)="callMe()"> this is down</p>
+<p class="eve" (mouseup)="callMe()"> this is up</p>
+<p class="eve" (mousemove)="callMe()"> this is move</p>
+<p class="eve" (dblclick)="callMe()"> this is dblclick</p>
+<p class="eve" (rightclick)="callMe()"> this is rightclick</p>
+
+<pre>
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="click" (click)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="focus" (focus)="callMe()">
+  
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="blur" (blur)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="up" (keyup)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="down" (keydown)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="press" (keypress)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="cut" (cut)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="copy" (copy)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="paste" (paste)="callMe()">
+  
+    <input type="text" name="fname" [(ngModel)]="lname" placeholder="change" (change)="callMe()">
+</pre>

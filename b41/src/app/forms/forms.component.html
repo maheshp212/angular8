@@ -1,0 +1,30 @@
+<p>forms works!</p>
+<pre>
+    <form name="f" #frm=ngForm>
+        <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel placeholder="first name" required>
+        <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel placeholder="last name">
+
+        <input type="submit">
+    </form>
+
+
+
+    Forms states
+    field::
+
+    valid :: {{firstName.valid}}
+    invalid :: {{firstName.invalid}}
+    dirty :: {{firstName.dirty}}
+    pristine :: {{firstName.pristine}}
+    touched :: {{firstName.touched}}
+    untouched :: {{firstName.untouched}}
+
+    forms:::
+    valid :: {{frm.valid}}
+    invalid :: {{frm.invalid}}
+    dirty :: {{frm.dirty}}
+    pristine :: {{frm.pristine}}
+    touched :: {{frm.touched}}
+    untouched :: {{frm.untouched}}
+
+</pre>
