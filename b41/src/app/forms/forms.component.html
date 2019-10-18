@@ -1,7 +1,15 @@
 <p>forms works!</p>
 <pre>
-    <form name="f" #frm=ngForm>
-        <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel placeholder="first name" required>
+    <form name="f" #frm=ngForm (submit)="frm.valid && login()">
+        First Name <span style="color:red">*</span><input type="text" name="firstN" [(ngModel)]="fname" #firstName=ngModel placeholder="first name" required minlength="5" maxlength="10"> {{fname}}
+        <!-- <p style="color:red" *ngIf="frm.submitted && firstName.invalid"> Please enter a valid input </p> -->
+        <!-- <p style="color:red" *ngIf="frm.dirty && firstName.invalid"> Please enter a valid input </p> -->
+        <!-- <p style="color:red" *ngIf="frm.touched && firstName.invalid"> Please enter a valid input </p> -->
+        
+        
+        <p style="color:red" *ngIf="(frm.dirty || frm.submitted) && firstName.hasError('required')"> this is a mandatory field </p>
+        <p style="color:red" *ngIf="(frm.dirty || frm.submitted) && firstName.hasError('minlength')"> Please enter min 5 chars </p>
+        <p style="color:red" *ngIf="(frm.dirty || frm.submitted) && firstName.hasError('maxlength')"> Please enter max 10 chars </p>
         <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel placeholder="last name">
 
         <input type="submit">
@@ -18,6 +26,9 @@
     pristine :: {{firstName.pristine}}
     touched :: {{firstName.touched}}
     untouched :: {{firstName.untouched}}
+    required :: {{firstName.hasError('required')}}
+    minlength :: {{firstName.hasError('minlength')}}
+    maxlength :: {{firstName.hasError('maxlength')}}
 
     forms:::
     valid :: {{frm.valid}}
@@ -26,5 +37,6 @@
     pristine :: {{frm.pristine}}
     touched :: {{frm.touched}}
     untouched :: {{frm.untouched}}
+    untouched :: {{frm.submitted}}
 
 </pre>
