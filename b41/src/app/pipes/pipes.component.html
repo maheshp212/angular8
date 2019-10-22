@@ -1,0 +1,53 @@
+<p>pipes works!</p>
+
+<pre>
+
+    {{fname}}
+    {{fname|lowercase}}
+    {{fname| uppercase}}
+
+
+    {{day}}
+    {{day | date}}
+    {{day |date:'dd-MM-yy'}}
+
+
+    {{age}}
+    {{age | number}}
+    <!-- {{fname | number}} -->
+
+
+    {{age | currency}}
+    {{age | currency:'INR '}}
+    {{age | currency:'Rs. '}}
+    {{age | currency:'&#8377;'}} <!-- from angular 5 -->
+    {{age | currency:'INR'}} <!-- before angular 5 -->
+
+
+    {{user}}
+    {{user | json}}
+
+
+    {{age | hexaaaaaaaaaaaaaaaaa}}
+    {{255 | hexaaaaaaaaaaaaaaaaa}}
+    {{15 | hexaaaaaaaaaaaaaaaaa}}
+    {{13 | hexaaaaaaaaaaaaaaaaa}}
+
+
+    {{5 | params:4:5:1}}
+
+
+
+    {{'a' | ascii}}
+
+    {{age | decimal:2}}
+
+
+
+
+    8143141574
+    +91 (814) 314 1574
+
+
+
+</pre>
