@@ -16,6 +16,8 @@ import { ParamsPipe } from './params.pipe';
 import { AsciiPipe } from './ascii.pipe';
 import { DecimalPipe } from './decimal.pipe';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     ParamsPipe,
     AsciiPipe,
     DecimalPipe,
-    LifecycleComponent
+    LifecycleComponent,
+    AttrDirective,
+    ClassDirective
   ],
   imports: [
     BrowserModule,
