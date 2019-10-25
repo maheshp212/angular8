@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
   fname: string = 'qshore';
+  userObj :any = {
+    fname: 'qshore',
+    lname: 'tech',
+    age: 45
+  }
   constructor() { }
 
   ngOnInit() {
@@ -19,5 +24,13 @@ export class IntroComponent implements OnInit {
 
   sendDatacc(name){
     console.log(name);
+  }
+
+  getName(name){
+    alert(name);
+  }
+
+  getAge(age){
+    alert(age);
   }
 }

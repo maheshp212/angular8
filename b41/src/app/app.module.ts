@@ -18,6 +18,7 @@ import { DecimalPipe } from './decimal.pipe';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { AttrDirective } from './attr.directive';
 import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ClassDirective } from './class.directive';
     DecimalPipe,
     LifecycleComponent,
     AttrDirective,
-    ClassDirective
+    ClassDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

@@ -5,3 +5,5 @@
 
 <div [appAttr]="dynamicLogic" [msg]="'Hello'" [fname]="fname" (sendData)="sendDatacc($event)"> attribute Directive</div>
 <div class="appClass"> class directive</div>
+
+<app-custom [user]="userObj" (sendName)="getName($event)" (sendAge)="getAge($event)" ></app-custom>
