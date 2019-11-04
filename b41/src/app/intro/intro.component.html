@@ -1,9 +1,37 @@
 <p>intro works!</p>
 
 
-<!-- <app-variables></app-variables> -->
+ <!-- <app-variables></app-variables>  -->
 
 <div [appAttr]="dynamicLogic" [msg]="'Hello'" [fname]="fname" (sendData)="sendDatacc($event)"> attribute Directive</div>
-<div class="appClass"> class directive</div>
+<div class="appClassn   "> class directive</div>
 
 <app-custom [user]="userObj" (sendName)="getName($event)" (sendAge)="getAge($event)" ></app-custom>
+
+<mahesh-table 
+[headers]="userHeaders"
+ [data]="users"></mahesh-table>
+
+<br><br><br>
+
+<mahesh-table 
+[headers]="carHeaders" 
+[data]="cars"></mahesh-table>
+
+<br><br><br>
+
+<mahesh-table 
+[headers]="animalHeaders" 
+[data]="animals"></mahesh-table>
+
+
+
+<app-users-list 
+    [users]="availableUsers"
+    (sendIndex)="availableUsersIndex($event)"></app-users-list>
+
+
+    <app-users-list [users]="selectedUsers"
+(sendIndex)="selectedUsersIndex($event)"></app-users-list>
+
+<div style="clear:both"> </div>>

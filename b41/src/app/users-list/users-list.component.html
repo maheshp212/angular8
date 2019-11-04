@@ -1,0 +1,10 @@
+<div class="container">
+    <div *ngFor="let user of users;let i = index" 
+    class="user" 
+    (click)="index(i)">
+        <div> 
+            <img src="{{user.img}}">
+        </div>
+        <div class="name">{{user.name}}</div>
+    </div>
+</div>
