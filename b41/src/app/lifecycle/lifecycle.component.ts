@@ -1,4 +1,5 @@
 import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy  } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-lifecycle',
@@ -9,10 +10,18 @@ export class LifecycleComponent implements OnInit, DoCheck, AfterContentInit, Af
 
   fname:string;
   
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() { // after constructor
     console.log('ngOnInit')
+    this.route.params.subscribe((res:any)=>{
+      console.log(res);
+      console.log(res.age);
+      console.log(res.email);
+      console.log(res.name);
+    }, ()=>{
+
+    })
   }
 
   ngAfterContentInit(){ // after getting data from the model
