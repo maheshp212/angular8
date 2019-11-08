@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'forms', component: FormsComponent},
   {path:'obj-forms', component: ObjFormsComponent},
   {path:'pipe', component: PipesComponent},
-  {path:'life-cycle/:name/:age/dir/:email', component: LifecycleComponent},
+    
   {path:'apis', component: ApisComponent},
   {path:'**', component: NotfoundComponent},
 ];
