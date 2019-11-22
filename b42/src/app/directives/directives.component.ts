@@ -9,9 +9,15 @@ export class DirectivesComponent implements OnInit {
 
   fname = 'qshores';
   fruits = ['kiwi', 'melon', 'berry'];
+  counter = 0;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  callMe(){
+    console.log(this.counter);
+    this.counter++;
   }
 
 }

@@ -1,0 +1,40 @@
+<p>forms works!</p>
+
+<pre>
+    <form name="form" #f=ngForm (submit)="f.valid && login()">
+        <input type="text" name="fname" [(ngModel)]="fname"  #firstName=ngModel required minlength="5"> {{fname}}
+        <!-- <p style="color:red" *ngIf="firstName.dirty && firstName.invalid"> please enter  a valid input</p> -->
+        <!-- <p style="color:red" *ngIf="firstName.dirty && firstName.hasError('required')"> this is mandatory field</p>
+        <p style="color:red" *ngIf="firstName.dirty && firstName.hasError('minlength')"> please enter  min 5 char</p> -->
+        <!-- <p style="color:red" *ngIf="f.submitted && firstName.hasError('required')"> this is mandatory field</p>
+        <p style="color:red" *ngIf="f.submitted && firstName.hasError('minlength')"> please enter  min 5 char</p> -->
+
+        <p style="color:red" *ngIf="firstName.touched && firstName.hasError('required')"> this is mandatory field</p>
+        <p style="color:red" *ngIf="firstName.touched && firstName.hasError('minlength')"> please enter  min 5 char</p>
+        
+        <input type="text" name="lname" [(ngModel)]="lname"  #lastName=ngModel> {{lname}}
+
+        <input type="submit">
+    </form>
+
+
+    Field States ::
+    valid :: {{firstName.valid}}
+    invalid :: {{firstName.invalid}}
+    dirty :: {{firstName.dirty}}
+    pristine :: {{firstName.pristine}}
+    touched :: {{firstName.touched}}
+    untouched :: {{firstName.untouched}}
+    required :: {{firstName.hasError('required')}}
+    minlength :: {{firstName.hasError('minlength')}}
+
+    Form States ::
+    valid :: {{f.valid}}
+    invalid :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+
+</pre>

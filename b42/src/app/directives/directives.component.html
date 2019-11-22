@@ -38,3 +38,39 @@ events - (click)
     <span  *ngSwitchCase="'tech'">this is tech</span> 
     <span  *ngSwitchDefault>this is default</span> 
 </p>
+
+<input [(ngModel)]="fname" name="fname"> {{fname}}
+
+<p (click)="callMe()" > this is click</p>
+<p (dblclick)="callMe()" > this is dbl click</p>
+<p (mouseover)="callMe()" > this is over</p>
+<p (mouseout)="callMe()" > this is out</p>
+<p (mouseenter)="callMe()" > this is enter</p>
+<p (mouseleave)="callMe()" > this is leave</p>
+<p (mousemove)="callMe()" > this is move</p>
+<p (mouseup)="callMe()" > this is up</p>
+<p (mousedown)="callMe()" > this is down</p>
+
+<pre>
+<input [(ngModel)]="fname" name="fname" placeholder="click" (click)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="focus" (focus)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="blur" (blur)="callMe()"> 
+
+
+<input [(ngModel)]="fname" name="fname" placeholder="change" (change)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="up" (keyup)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="down" (keydown)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="press" (keypress)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="cut" (cut)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="copy" (copy)="callMe()"> 
+
+<input [(ngModel)]="fname" name="fname" placeholder="paste" (paste)="callMe()"> 
+
+</pre>
