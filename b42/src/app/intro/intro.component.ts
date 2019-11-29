@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  name = 'qshore tech';
+  msg=" Hello"
   constructor() { }
 
   ngOnInit() {
   }
 
+
+  customLogic(){
+    console.log('custom logic invoked from parent component')
+  }
+
+  asdf(cc){
+    console.log(cc);
+  }
 }

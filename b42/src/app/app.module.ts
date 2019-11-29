@@ -15,6 +15,8 @@ import { ParamsPipe } from './params.pipe';
 import { SqrtPipe } from './sqrt.pipe';
 import { ReversePipe } from './reverse.pipe';
 import { NumreversePipe } from './numreverse.pipe';
+import { AsciiPipe } from './ascii.pipe';
+import { AttrDirective } from './attr.directive';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NumreversePipe } from './numreverse.pipe';
     ParamsPipe,
     SqrtPipe,
     ReversePipe,
-    NumreversePipe
+    NumreversePipe,
+    AsciiPipe,
+    AttrDirective
   ],
   imports: [
     BrowserModule,
