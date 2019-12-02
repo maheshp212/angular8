@@ -7,3 +7,16 @@
 [msg]="msg"
 (sendMe) = "asdf($event)"
 > this is custom directive </div>
+
+
+<p class="appClass"> class directive</p>
+
+<app-custom
+[user] = "{fname:'qshore', lname:'tech', age:56}"
+
+(sendName)= "ccc($event)"
+(sendAge) ="sendAge($event)"
+></app-custom>
+
+
+<!-- <app-directives></app-directives> -->

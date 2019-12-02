@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObFormsComponent implements OnInit {
 
-  user = {}
+  user:any = {}
   constructor() { }
 
   ngOnInit() {

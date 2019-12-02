@@ -22,4 +22,12 @@ export class IntroComponent implements OnInit {
   asdf(cc){
     console.log(cc);
   }
+
+  ccc(name){
+    alert(name)
+  }
+
+  sendAge(age){
+    alert(age)
+  }
 }

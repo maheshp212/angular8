@@ -17,6 +17,9 @@ import { ReversePipe } from './reverse.pipe';
 import { NumreversePipe } from './numreverse.pipe';
 import { AsciiPipe } from './ascii.pipe';
 import { AttrDirective } from './attr.directive';
+import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { AttrDirective } from './attr.directive';
     ReversePipe,
     NumreversePipe,
     AsciiPipe,
-    AttrDirective
+    AttrDirective,
+    ClassDirective,
+    CustomComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,
