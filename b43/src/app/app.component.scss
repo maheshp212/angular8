@@ -1,0 +1,50 @@
+  .spacer {
+    flex: 1;
+  }
+  .toolbar {
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+  }
+  .toolbar img {
+    margin: 0 16px;
+  }
+  ul{
+      margin: 0;
+    li{
+        float: left;
+        list-style-type: none;
+        padding:10px;
+        a {
+            text-decoration: none;
+            color: white
+
+        }
+        a:hover{
+            text-decoration: underline
+
+        }
+    }
+  
+  }
+ 
+  svg#clouds {
+    position: fixed;
+    bottom: -160px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+  main{
+      min-height: 400px;
+        padding: 20px;
+  }
+  footer{
+      color: tomato;
+      text-align: center;
+      padding:20px;
+  }
