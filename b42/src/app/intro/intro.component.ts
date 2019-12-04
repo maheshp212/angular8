@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {ActivatedRoute} from '@angular/router'
 @Component({
   selector: 'app-intro',
   templateUrl: './intro.component.html',
@@ -9,9 +9,12 @@ export class IntroComponent implements OnInit {
 
   name = 'qshore tech';
   msg=" Hello"
-  constructor() { }
+  constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe((res)=>{
+      console.log(res);
+    })
   }
 
 

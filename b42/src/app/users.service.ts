@@ -48,7 +48,7 @@ export class UsersService {
   }
 
   deleteUser(id){
-    var url = 'http://api.qshore.com/delete-user/11';
+    var url = 'http://api.qshore.com/delete-user/'+id;
     return this.http.delete(url);
   }
 }

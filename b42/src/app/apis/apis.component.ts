@@ -13,6 +13,10 @@ export class ApisComponent implements OnInit {
   constructor(private user:UsersService) { }
 
   ngOnInit() { 
+   this.listUsers(); 
+  }
+
+  listUsers(){
     this.user.listUsers().subscribe((res:any)=>{
       this.usersList = res.data;
       console.log(res);
@@ -32,6 +36,7 @@ export class ApisComponent implements OnInit {
   addUser() {
     this.user.addUser().subscribe((res)=> {
       this.userInfo = res;
+      this.listUsers();
     }, (err)=>{
 
     })
@@ -40,6 +45,7 @@ export class ApisComponent implements OnInit {
   editUser(id){
     this.user.editUser(id).subscribe((res)=> {
       this.userInfo = res;
+      this.listUsers();
     }, (err)=>{
 
     })
@@ -48,6 +54,7 @@ export class ApisComponent implements OnInit {
   deleteUser(id){
     this.user.deleteUser(id).subscribe((res)=> {
       this.userInfo = res;
+      this.listUsers(); 
     }, (err)=>{
 
     })
