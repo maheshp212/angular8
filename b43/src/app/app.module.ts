@@ -13,6 +13,8 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
+import { DebitPipe } from './debit.pipe';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ParamsPipe } from './params.pipe';
     ObjFormsComponent,
     PipesComponent,
     HexaPipe,
-    ParamsPipe
+    ParamsPipe,
+    DebitPipe,
+    ReversePipe
   ],
   imports: [
     BrowserModule,
