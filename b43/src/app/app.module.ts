@@ -10,6 +10,9 @@ import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
     VariablesComponent,
     DirectivesComponent,
     FormsComponent,
-    ObjFormsComponent
+    ObjFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe
   ],
   imports: [
     BrowserModule,
