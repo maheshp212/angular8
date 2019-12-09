@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  gnamee = 'qshore tech'
   constructor() { }
 
   ngOnInit() {
   }
 
+  dynamicLogic(){
+    console.log('logic from parent comp')
+  }
+
+  yy(res){
+    console.log(res);
+  }
 }

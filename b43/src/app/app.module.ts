@@ -15,6 +15,7 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { DebitPipe } from './debit.pipe';
 import { ReversePipe } from './reverse.pipe';
+import { AttrDirective } from './attr.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReversePipe } from './reverse.pipe';
     HexaPipe,
     ParamsPipe,
     DebitPipe,
-    ReversePipe
+    ReversePipe,
+    AttrDirective
   ],
   imports: [
     BrowserModule,
