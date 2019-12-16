@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class IntroComponent implements OnInit {
 
   gnamee = 'qshore tech'
+  userData = {fname:'qshore' , lname:'tech', age:45};
+  
   constructor() { }
 
   ngOnInit() {
@@ -19,5 +21,13 @@ export class IntroComponent implements OnInit {
 
   yy(res){
     console.log(res);
+  }
+
+  sendName(name){
+      alert(name)
+  }
+
+  sendAgessss(age) {
+    alert(age);
   }
 }

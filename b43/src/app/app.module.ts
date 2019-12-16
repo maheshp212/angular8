@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,9 +17,13 @@ import { ParamsPipe } from './params.pipe';
 import { DebitPipe } from './debit.pipe';
 import { ReversePipe } from './reverse.pipe';
 import { AttrDirective } from './attr.directive';
-
+import { ClassDirective } from './class.directive';
+import { CustomComponent } from './custom/custom.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { ApisComponent } from './apis/apis.component';
+import {UsersService} from './users.service';
 @NgModule({
-  declarations: [
+  declarations: [ // components  directives & pipes
     AppComponent,
     HomeComponent,
     IntroComponent,
@@ -31,14 +36,19 @@ import { AttrDirective } from './attr.directive';
     ParamsPipe,
     DebitPipe,
     ReversePipe,
-    AttrDirective
+    AttrDirective,
+    ClassDirective,
+    CustomComponent,
+    LifeCycleComponent,
+    ApisComponent,
   ],
-  imports: [
+  imports: [ // Modules
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService], // services
   bootstrap: [AppComponent]
 })
 export class AppModule { }
