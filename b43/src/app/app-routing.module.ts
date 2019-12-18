@@ -9,19 +9,20 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { ApisComponent } from './apis/apis.component';
+import {NotfoundComponent} from './notfound/notfound.component'
 
 
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
+  {path:'', component:HomeComponent},
   {path:'intro', component:IntroComponent},
   {path:'xyz', component:VariablesComponent},
   {path:'dir', component:DirectivesComponent},
   {path:'forms', component:FormsComponent},
   {path:'obj-forms', component:ObjFormsComponent},
-  {path:'pipes/:id/:age', component:PipesComponent},
   {path:'pipes/:id/:age/:name', component:PipesComponent},
   {path:'life-cycle', component:LifeCycleComponent},
   {path:'apis', component:ApisComponent},
+  {path:'**', component:NotfoundComponent},
 ];
 
 @NgModule({
