@@ -3,6 +3,8 @@
 <p *ngIf="fname == 'qshore'"> this is if</p> <!-- *ngIf will remove the  element from dom if condition is false -->
 <p [hidden]="fname == 'qshore'" > this is hidden</p> <!-- [hidden] wil add a attribut hidden if the condition is true -->
 
+<p [ngClass]="{'eve': (fname == 'qshore')}">ng class</p>
+<p [ngStyle]="{'background-color': fname == 'qshore' ? 'red' : 'yellow'}">ng class</p>
 <p [ngSwitch]="fname">
     <span *ngSwitchCase="'qshore'"> this is qshore</span>
     <span *ngSwitchCase="'angular'"> this is angular</span>
@@ -26,7 +28,8 @@
     </tr>
 </table>
 
-<input type="text" name="fname" [(ngModel)]="fname"> {{fname}}
+<input type="text" name="fasdfname" 
+[(ngModel)]="fname"> {{fname}}
 
 <p class="eve" (click)="callMe()"> this is click</p>
 <p class="eve" (mouseover)="callMe()"> this is over</p>

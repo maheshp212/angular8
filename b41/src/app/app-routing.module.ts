@@ -19,6 +19,8 @@ const routes: Routes = [
   {path:'forms', component: FormsComponent},
   {path:'obj-forms', component: ObjFormsComponent},
   {path:'pipe', component: PipesComponent},
+  {path:'life-cycle', component: LifecycleComponent},
+  {path:'life-cycle/:id/:name/:age/:sdf', component: LifecycleComponent},
     
   {path:'apis', component: ApisComponent},
   {path:'**', component: NotfoundComponent},

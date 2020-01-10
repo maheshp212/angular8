@@ -10,7 +10,7 @@ export class UsersService {
   listUsers(){
     var url = 'http://api.qshore.com/users';
     return this.http.get(url);
-  }
+}
 
   viewUser(id){
     var url = 'http://api.qshore.com/view-user/'+id;
