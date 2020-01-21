@@ -1,0 +1,53 @@
+<p>directives works!</p>
+<p *ngIf="fname == 'qshore'"> this is IF</p>
+<p [hidden]="fname == 'qshore'"> this is HIDDEN</p>
+
+
+<p [ngSwitch]="fname">
+    <span *ngSwitchCase="'qshore'"> this is qshore</span>
+    <span *ngSwitchCase="'tech'"> this is tech</span>
+    <span *ngSwitchCase="'angular'"> this is angular</span>
+    <span *ngSwitchDefault> this is default</span>
+</p>
+
+<h1 *ngFor="let fruit of fruits"> {{fruit}} </h1>
+
+<ol >
+    <li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select >
+    <option *ngFor="let fruit of fruits" > {{fruit}}  </option>
+</select>
+
+<table border="1">
+    <tr >
+        <td *ngFor="let fruit of fruits"> {{fruit}} </td>
+    </tr>
+</table>
+
+<input type="text"  [(ngModel)]="fname">
+Events
+
+<p (click)="callMe()" > this is click</p>
+<p (dblclick)="callMe()" > this is dblclick</p>
+<p (mouseover)="callMe()" > this is over</p>
+<p (mouseout)="callMe()" > this is out</p>
+<p (mouseenter)="callMe()" > this is enter</p>
+<p (mouseleave)="callMe()" > this is leave</p>
+<p (mousemove)="callMe()" > this is move</p>
+<p (mouseup)="callMe()" > this is up</p>
+<p (mousedown)="callMe()" > this is down</p>
+
+<pre>
+    <input type="text"  [(ngModel)]="fname" placeholder="click" (click)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="press" (keypress)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="down" (keydown)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="up" (keyup)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="blur" (blur)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="focus" (focus)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="change" (change)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="copy" (copy)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="paste" (paste)="callMe()">
+    <input type="text"  [(ngModel)]="fname" placeholder="cut" (cut)="callMe()">
+</pre>
