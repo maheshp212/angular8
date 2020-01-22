@@ -11,10 +11,13 @@
         boolean
     -->
 
-<form name="frm" #f=ngForm>
-        <input type="text" name="fname" [(ngModel)]="fname" #firstName=ngModel required minlength="5" maxlength="10" > {{fname}}
+<form name="frm" #f=ngForm (submit)="f.valid && login()">
+        <input type="text" name="qshore" [(ngModel)]="fname" #firstName=ngModel required minlength="5" maxlength="10" > {{fname}}
         <!-- <p style="color:red" *ngIf="f.submitted && firstName.invalid">Please enter a valid input</p> -->
-        <p style="color:red" *ngIf="firstName.touched && firstName.invalid">Please enter a valid input</p>
+        <!-- <p style="color:red" *ngIf="firstName.touched && firstName.invalid">Please enter a valid input</p> -->
+        <p style="color:red" *ngIf="firstName.dirty && firstName.hasError('required')">this is a mandatory field</p>
+        <p style="color:red" *ngIf="firstName.dirty && firstName.hasError('minlength')">Please enter min 5 chars</p>
+
         <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel >
         <input type="submit">
 </form>
@@ -26,6 +29,9 @@ dirty :: {{firstName.dirty}}
 pristine :: {{firstName.pristine}}
 touched :: {{firstName.touched}}
 untouched :: {{firstName.untouched}}
+required :: {{firstName.hasError('required')}}
+minlength :: {{firstName.hasError('minlength')}}
+maxlength :: {{firstName.hasError('maxlength')}}
 
 
 Form States

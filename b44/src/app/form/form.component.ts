@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  fname;
+  lname;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  login(){
+    alert(`${this.fname}  --  ${this.lname}`);
   }
 
 }
