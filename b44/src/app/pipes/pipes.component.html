@@ -1,0 +1,46 @@
+<p>pipes works!</p>
+
+<!-- 
+    lowercase
+    uppercase
+    date
+    number
+    currency
+    json
+ -->
+<pre>
+ {{fname}}
+ {{fname | lowercase}}
+ {{fname | uppercase}}
+
+ {{age}}
+ {{age | number}}
+
+
+ {{age | currency}}
+ {{age | currency:'Rs. '}}
+ {{age | currency:'INR '}}
+ {{age | currency:'INR'}}
+ {{age | currency:'&#8377;'}}
+
+
+ {{age | hexaaaaaaaaaaaaaaaaaaaaa}}
+ {{255 | hexaaaaaaaaaaaaaaaaaaaaa}}
+ {{15 | hexaaaaaaaaaaaaaaaaaaaaa}}
+
+
+ {{5 | params:4:5:2}}
+ {{6 | params:4:5:2}}
+ {{2 | params:4:'5':2}}
+
+ {{day}}
+ {{day | date}}
+ {{day | date:'dd-MM-yyyy'}}
+ 
+ {{fruits}}
+ {{fruits | orderBy}}
+
+ {{user}}
+ {{user | json}}
+
+</pre>

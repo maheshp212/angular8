@@ -9,6 +9,11 @@ import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormComponent } from './form/form.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { FormComponent } from './form/form.component';
     IntroComponent,
     VariablesComponent,
     DirectivesComponent,
-    FormComponent
+    FormComponent,
+    ObjFormsComponent,
+    PipesComponent,
+    HexaPipe,
+    ParamsPipe,
+    OrderByPipe
   ],
   imports: [
     BrowserModule,
