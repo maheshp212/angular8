@@ -20,4 +20,12 @@ callMe(){
   console.log(this.counter);
   this.counter++;
 }
+login(){
+  console.log(' im logic from parent component')
+}
+
+data(value){
+  console.log('this is the dat from child  to  parent')
+  console.log(value);
+}
 }

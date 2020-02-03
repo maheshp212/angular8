@@ -14,6 +14,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { OrderByPipe } from './order-by.pipe';
+import { AttrDirective } from './attr.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { OrderByPipe } from './order-by.pipe';
     PipesComponent,
     HexaPipe,
     ParamsPipe,
-    OrderByPipe
+    OrderByPipe,
+    AttrDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

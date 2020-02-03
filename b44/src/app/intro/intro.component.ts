@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  userData = {fname:'qshore', lname: 'tech', age:34}
   constructor() { }
 
   ngOnInit() {
+  }
+
+  name(event){
+    alert(event)
+  }
+
+  sendAge(event){
+    alert(event);
   }
 
 }

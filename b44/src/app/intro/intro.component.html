@@ -1,1 +1,11 @@
 <p>intro works!</p>
+
+<!-- <app-form></app-form> -->
+
+<app-custom
+    [user] = "userData"
+    [greeting] = "'hello'"
+
+    (sendName) = "name($event)"
+    (sendAge) = "sendAge($event)"
+></app-custom>
