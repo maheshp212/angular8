@@ -16,6 +16,7 @@ import { ParamsPipe } from './params.pipe';
 import { OrderByPipe } from './order-by.pipe';
 import { AttrDirective } from './attr.directive';
 import { CustomComponent } from './custom/custom.component';
+import { AddUserComponent } from './add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CustomComponent } from './custom/custom.component';
     ParamsPipe,
     OrderByPipe,
     AttrDirective,
-    CustomComponent
+    CustomComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

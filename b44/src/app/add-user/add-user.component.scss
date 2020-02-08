@@ -1,0 +1,19 @@
+.container{
+    border: 1px solid deepskyblue;
+    height:300px;
+    overflow:auto;
+}
+.user{
+    width: 25%;
+    float: left;
+    
+    img{
+        border-radius:50%; 
+        width: 100%;
+        height: 50px;
+    }
+
+    div {
+        text-align: center;
+    }
+}

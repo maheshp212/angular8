@@ -2,10 +2,16 @@
 
 <!-- <app-form></app-form> -->
 
-<app-custom
-    [user] = "userData"
-    [greeting] = "'hello'"
+<app-custom [user]="userData" [greeting]="'hello'" (sendName)="name($event)" (sendAge)="sendAge($event)"></app-custom>
 
-    (sendName) = "name($event)"
-    (sendAge) = "sendAge($event)"
-></app-custom>
+
+<div>
+    <div style="float:left;width:50%; height:300px; overflow:auto;">
+        <app-add-user [users]="availableUsers" (sendUserIndex)="availableIndex($event)">
+        </app-add-user>
+    </div>
+    <div style="float:left;width:50%; height:300px; overflow:auto;">
+        <app-add-user [users]="selectedUsers" (sendUserIndex)="selectedIndex($event)">
+        </app-add-user>
+    </div>
+</div>
