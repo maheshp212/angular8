@@ -9,16 +9,52 @@ import { UsersService } from '../users.service';
 })
 export class ApisComponent implements OnInit {
 
-  usersList:any;
-  constructor(private users:UsersService) { }
+  usersList: any;
+  userInfo:any
+  constructor(private users: UsersService) { }
 
   ngOnInit() {
-    this.users.listUsers().subscribe((res:any)=>{
+    this.listusers();
+  }
+
+  listusers(){
+    this.users.listUsers().subscribe((res: any) => {
       // success
       this.usersList = res.data;
-      console.log(res); 
-    },(errRes:any)=>{
+      console.log(res);
+    }, (errRes: any) => {
       // failure
+    })
+  }
+
+  viewUser(id) {
+    this.users.viewUser(id).subscribe((res: any) => {
+      this.userInfo = res;
+    }, (errRes: any) => {
+    })
+  }
+
+  editUser(id) {
+    this.users.editUser(id).subscribe((res: any) => {
+      this.userInfo = res;
+      this.listusers();
+    }, (errRes: any) => {
+    })
+  }
+
+  deleteUser(id) {
+    this.users.deleteUser(id).subscribe((res: any) => {
+      this.userInfo = res;
+      this.listusers();
+    }, (errRes: any) => {
+    })
+  }
+
+  createUser() {
+    this.users.addUser().subscribe((res: any) => {
+      this.userInfo = res;
+      this.listusers();
+    }, (errRes: any) => {
     })
   }
 

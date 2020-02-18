@@ -1,1 +1,40 @@
 <p>home works!</p>
+<p>
+    <ngb-alert [dismissible]="false">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+  </p>
+
+  
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide *ngFor="let img of images">
+      <div class="picsum-img-wrapper">
+        <img [src]="img.img" alt="Random first slide">
+      </div>
+      <div class="carousel-caption">
+        <h3>{{img.title}}</h3>
+        <p>{{img.label}}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+  
+
+  
+<ngb-datepicker #dp [(ngModel)]="model" (navigate)="date = $event.next"></ngb-datepicker>
+
+<hr/>
+
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="selectToday()">Select Today</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo()">To current month</button>
+<button class="btn btn-sm btn-outline-primary mr-2" (click)="dp.navigateTo({year: 2013, month: 2})">To Feb 2013</button>
+
+<hr/>
+
+<pre>Month: {{ date.month }}.{{ date.year }}</pre>
+<pre>Model: {{ model | json }}</pre>
+
+
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+
+
+<mat-card>Simple card</mat-card>

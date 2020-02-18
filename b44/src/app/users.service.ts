@@ -21,11 +21,11 @@ export class UsersService {
   addUser() {
     var url = 'http://api.qshore.com/add-user';
     var data = {
-      fname: 'Mohan',
-      lname:'Lal',
+      fname: 'anmol',
+      lname:'gahoi',
       age:23,
-      email:'mohanlal@123',
-      password:'lal123'
+      email:'anmolgahoi@123',
+      password:'gahoi123'
 
     }
     return this.http.post(url, data);
